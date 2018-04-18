@@ -18,12 +18,12 @@ local db_test = libmysql:new()
 ## query
 
 ```
-syntax: yourdb = yourdb:query("select des from test1 where test_id=? ", {3})
+syntax: res, err = yourdb:query("select des from test1 where test_id=? ", {3})
 ```
 Some read database operations
 ## main
 ```
-syntax: yourdb = yourdb:main("UPDATE test1 SET des='my lua' WHERE test_id=?", {3})
+syntax: res, err = yourdb:main("UPDATE test1 SET des='my lua' WHERE test_id=?", {3})
 ```
 Some write database operations
 
